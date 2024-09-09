@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "TechBridgeOLAP", "TechBridgeOLAP\TechBridgeOLAP.dwproj", "{AFCBD946-7EA0-4037-B3B6-6F354B650B16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFCBD946-7EA0-4037-B3B6-6F354B650B16}.Development|Default.ActiveCfg = Development
+		{AFCBD946-7EA0-4037-B3B6-6F354B650B16}.Development|Default.Build.0 = Development
+		{AFCBD946-7EA0-4037-B3B6-6F354B650B16}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA6BA44F-6DF1-4B55-9AA6-E0BBFABB4FA5}
+	EndGlobalSection
+EndGlobal
