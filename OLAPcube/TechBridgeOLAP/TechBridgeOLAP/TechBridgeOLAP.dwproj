@@ -6,10 +6,37 @@
     <Name>TechBridgeOLAP.database</Name>
     <FullPath>TechBridgeOLAP.database</FullPath>
   </Database>
+  <DataSources>
+    <ProjectItem>
+      <Name>Soft Developers DW.ds</Name>
+      <FullPath>Soft Developers DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Soft Developers DW.dsv</Name>
+      <FullPath>Soft Developers DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Soft Developers DW</Id>
+            <Name>Soft Developers DW</Name>
+            <Value xsi:type="xsd:string">Provider=MSOLEDBSQL.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=softDevelopersDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Soft Developers DW</Id>
+            <Name>Soft Developers DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
