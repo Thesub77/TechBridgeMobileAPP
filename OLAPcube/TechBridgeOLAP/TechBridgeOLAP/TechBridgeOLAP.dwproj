@@ -6,6 +6,20 @@
     <Name>TechBridgeOLAP.database</Name>
     <FullPath>TechBridgeOLAP.database</FullPath>
   </Database>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project.dim</Name>
+      <FullPath>Project.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
   <DataSources>
     <ProjectItem>
       <Name>Soft Developers DW.ds</Name>
