@@ -6,6 +6,18 @@
     <Name>TechBridgeOLAP.database</Name>
     <FullPath>TechBridgeOLAP.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Soft Developers DW.cube</Name>
+      <FullPath>Soft Developers DW.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Soft Developers DW.partitions</Name>
+          <FullPath>Soft Developers DW.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
   <Dimensions>
     <ProjectItem>
       <Name>Customer.dim</Name>
