@@ -138,7 +138,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/btngananciamet"
                     android:layout_width="132dp"
                     android:layout_height="104dp"
                     android:background="@null"
