@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".consulta">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageButton
+                android:id="@+id/btnBackconsulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="300dp"
+                android:background="@color/white"
+                android:contentDescription="@string/iconback"
+                android:translationY="@dimen/_20dp"
+                app:srcCompat="@drawable/iconback"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtcon"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="-20dp"
+                android:fontFamily="@font/lilita_one"
+                android:text="@string/consultas"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                android:textSize="24sp"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_consulta"
+                android:layout_marginStart="13dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnmarganancia"
+                    android:layout_width="119dp"
+                    android:layout_height="104dp"
+                    android:translationY="5dp"
+                    android:paddingStart="@dimen/_20dp"
+                    android:background="@null"
+                    android:contentDescription="@string/iconmargen"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/iconmargen" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-120dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lilita_one"
+                    android:text="@string/margen_de_ganancia_por_proyecto"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:translationY="115dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="147dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/border_consulta"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnmargencliente"
+                    android:layout_width="127dp"
+                    android:layout_height="94dp"
+                    android:background="@null"
+                    android:contentDescription="@string/iconmargencliente"
+                    android:paddingStart="25dp"
+                    android:scaleType="fitCenter"
+                    android:translationY="12dp"
+                    app:srcCompat="@drawable/iconmargencliente" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-120dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lilita_one"
+                    android:text="@string/margen_de_ganacia_promedio_por_cliente"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:translationY="115dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:translationY="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="13dp"
+                android:background="@drawable/border_consulta"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="132dp"
+                    android:layout_height="104dp"
+                    android:background="@null"
+                    android:paddingStart="@dimen/_20dp"
+                    android:contentDescription="@string/iconmargenmetod"
+                    android:scaleType="fitCenter"
+                    android:translationY="5dp"
+                    app:srcCompat="@drawable/iconmetodologia" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-130dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lilita_one"
+                    android:text="@string/margen_de_ganancia_por_metodolog_a"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:translationY="115dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

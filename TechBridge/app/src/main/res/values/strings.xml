@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TechBridge</string>
+    <string name="softdevelopers">SoftDevelopers</string>
+    <string name="username">Username</string>
+    <string name="logodetechbridge">Logodetechbridge</string>
+    <string name="password">Password</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="menu">Menu</string>
+    <string name="icondashboard">IconDashboard</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="configuraciones">Configuraciones</string>
+    <string name="iconconfig">iconconfig</string>
+    <string name="iconacercade">iconacercade</string>
+    <string name="acerca_de">Acerca De</string>
+    <string name="iconcerrarsesion">iconcerrarsesion</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="iconback">iconback</string>
+    <string name="consultas">Consultas</string>
+    <string name="selecciona_una_opcion">Selecciona una opcion</string>
+    <string name="seleccione_una_consulta">seleccione una consulta</string>
+    <string name="iconmargen">iconmargen</string>
+
+    <string name="margen_de_ganancia_por_proyecto">Margen de ganancia por Proyecto</string>
+    <string name="iconmargencliente">iconmargencliente</string>
+    <string name="margen_de_ganacia_promedio_por_cliente">Margen de ganacia promedio por cliente</string>
+    <string name="margen_de_ganancia_por_metodolog_a">Margen de ganancia por metodología</string>
+    <string name="iconmargenmetod">iconmargenmetod</string>
+
+</resources>
