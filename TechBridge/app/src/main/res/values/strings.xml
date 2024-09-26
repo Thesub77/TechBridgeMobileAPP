@@ -25,5 +25,7 @@
     <string name="margen_de_ganacia_promedio_por_cliente">Margen de ganacia promedio por cliente</string>
     <string name="margen_de_ganancia_por_metodolog_a">Margen de ganancia por metodología</string>
     <string name="iconmargenmetod">iconmargenmetod</string>
+    <string name="iconganciames">iconganciames</string>
+    <string name="margen_de_ganancia_por_mes">Margen de ganancia por mes</string>
 
 </resources>
