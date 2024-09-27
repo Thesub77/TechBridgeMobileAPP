@@ -27,5 +27,8 @@
     <string name="iconmargenmetod">iconmargenmetod</string>
     <string name="iconganciames">iconganciames</string>
     <string name="margen_de_ganancia_por_mes">Margen de ganancia por mes</string>
+    <string name="iconproyectosconmasgancia">iconproyectosconmasgancia</string>
+    <string name="proyectos_con_mayor_margen_de_ganancia">Proyectos con mayor margen de ganancia</string>
+    <string name="proyecto_con_menor_margen_de_ganancia">Proyecto con menor margen de ganancia</string>
 
 </resources>
