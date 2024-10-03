@@ -30,5 +30,13 @@
     <string name="iconproyectosconmasgancia">iconproyectosconmasgancia</string>
     <string name="proyectos_con_mayor_margen_de_ganancia">Proyectos con mayor margen de ganancia</string>
     <string name="proyecto_con_menor_margen_de_ganancia">Proyecto con menor margen de ganancia</string>
+    <string name="margen_de_15_proyectos_entregados_en_2010_ordenados_alfab_ticamente">Margen de 15 proyectos entregados en 2010, ordenados alfabéticamente.</string>
+    <string name="clientes_con_ganancias_mayores_a_50_000">Clientes con ganancias mayores a 50,000.</string>
+    <string name="ganancia_total_de_los_ltimos_4_a_os_sin_incluir_el_actual">Ganancia total de los últimos 4 años (sin incluir el actual).</string>
+    <string name="ganancia_total_de_los_ltimos_4_a_os">Ganancia total de los últimos 4 años.</string>
+    <string name="top_10_proyectos_con_mayor_margen">Top 10 proyectos con mayor margen.</string>
+    <string name="top_10_proyectos_con_menor_margen_por_a_o">Top 10 proyectos con menor margen por año.</string>
+    <string name="costo_trimestral_total_en_2023">Costo trimestral total en 2023.</string>
+    <string name="proyectos_con_costo_superior_a_1_500_000">Proyectos con costo superior a 1,500,000.</string>
 
 </resources>
