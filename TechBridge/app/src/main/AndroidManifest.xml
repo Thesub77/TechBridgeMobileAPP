@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TechBridge"
         tools:targetApi="31">
         <activity
+            android:name=".Acercade"
+            android:exported="false" />
+        <activity
             android:name=".consulta"
             android:exported="false" />
         <activity

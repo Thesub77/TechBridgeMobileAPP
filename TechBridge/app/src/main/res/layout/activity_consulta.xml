@@ -304,7 +304,7 @@
                         android:layout_marginStart="-130dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/lilita_one"
-                        android:text="@string/costo_trimestral_total_en_2023"
+                        android:text="@string/ganancia_de_los_ltimos_10_proyectos"
                         android:textAlignment="center"
                         android:textColor="@color/blue"
                         android:textSize="13sp"
