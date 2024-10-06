@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lilita_one"
                 android:textAlignment="center"
-                android:translationY="220dp"
+                android:translationY="250dp"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 android:text="@string/softdevelopers" />

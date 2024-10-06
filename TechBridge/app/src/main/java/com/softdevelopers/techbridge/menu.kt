@@ -32,7 +32,7 @@ class menu : AppCompatActivity() {
             val intent = Intent(this, login::class.java)
             startActivity(intent)
         }
-        //Redireccionar el boton hacia las consultas
+
         //Redireccionar el boton de cerrar sesion hacia el login
         val btnconsultas: ImageButton = findViewById(R.id.btnconsultas)
         btnconsultas.setOnClickListener {
@@ -40,6 +40,11 @@ class menu : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        //Redireccionar el boton de acerca de hacia el activity_acercade
+        val btnAcercade: ImageButton = findViewById(R.id.btnAcercade)
+        btnAcercade.setOnClickListener {
+            val intent = Intent(this, Acercade::class.java)
+            startActivity(intent)
+        }
     }
     }
