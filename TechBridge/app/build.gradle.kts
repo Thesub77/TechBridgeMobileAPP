@@ -15,6 +15,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
+        // Habilitar View Binding
+        buildFeatures {
+            viewBinding = true
+        }
     }
 
     buildTypes {
@@ -42,6 +48,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation ("com.github.kittinunf.fuel:fuel:2.3.1")
+    implementation ("com.github.kittinunf.fuel:fuel-gson:2.3.1")
+    implementation ("com.google.code.gson:gson:2.8.9")
+    implementation ("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -13,10 +13,13 @@
         android:theme="@style/Theme.TechBridge"
         tools:targetApi="31">
         <activity
-            android:name=".Acercade"
+            android:name=".consulta"
             android:exported="false" />
         <activity
-            android:name=".consulta"
+            android:name=".Consulta1"
+            android:exported="false" />
+        <activity
+            android:name=".Acercade"
             android:exported="false" />
         <activity
             android:name=".menu"
@@ -33,6 +36,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
