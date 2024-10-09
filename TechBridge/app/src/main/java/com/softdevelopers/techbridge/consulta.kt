@@ -26,5 +26,11 @@ class consulta : AppCompatActivity() {
             val intent = Intent(this, Consulta1::class.java)
             startActivity(intent)
         }
+        //Redireccionar el boton de la consulta1 hacia su pantalla
+        val btnmargencliente: ImageButton = findViewById(R.id.btnmargencliente)
+        btnmargencliente.setOnClickListener {
+            val intent = Intent(this, Consulta2::class.java)
+            startActivity(intent)
+        }
     }
 }

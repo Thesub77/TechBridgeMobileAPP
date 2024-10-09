@@ -1,33 +1,33 @@
 package com.softdevelopers.techbridge
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.core.Response
 import com.github.kittinunf.fuel.coroutines.awaitString
-import com.github.kittinunf.fuel.gson.responseObject
 import com.google.gson.Gson
 import com.softdevelopers.techbridge.databinding.ActivityConsulta1Binding
+import com.softdevelopers.techbridge.databinding.ActivityConsulta2Binding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class Consulta1 : AppCompatActivity() {
+class Consulta2 : AppCompatActivity() {
+
 
     // Declara el binding
-    private lateinit var binding: ActivityConsulta1Binding
+    private lateinit var binding: ActivityConsulta2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Infla el layout usando View Binding
-        binding = ActivityConsulta1Binding.inflate(layoutInflater)
+        binding = ActivityConsulta2Binding.inflate(layoutInflater)
         setContentView(binding.root) // Establece el root view del binding como el contenido de la actividad
 
         // Configura el listener para los insets
@@ -36,56 +36,31 @@ class Consulta1 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //Cargar el metodo users
         loadUsers()
 
         Toast.makeText(this, "Llegada", Toast.LENGTH_SHORT).show()
 
-        try {
-        Fuel.get("https://795b-2803-2d60-1105-2873-c14-3fa5-d4ba-aea.ngrok-free.app/ganancia_15_proyectos_o_alfabet")
-            .response { request, response, result ->
-
-                    // Procesando la respuesta
-                    val jsonBody = response.body().asString("application/json")
-                    Toast.makeText(this, jsonBody, Toast.LENGTH_SHORT).show()
-
-                    // Usar Gson para convertir el JSON a una lista
-                    val gson = Gson()
-                    val listabtconsulta1 = gson.fromJson(jsonBody, Array<btconsulta1>::class.java).toList()
-
-
-
-                    // Configurando el RecyclerView con la lista
-                    binding.recyclerView.layoutManager = LinearLayoutManager(this)
-                    binding.recyclerView.adapter = Consultas1Adapter.Consultas1Adapter(listabtconsulta1)
-
-
-            } } catch (e: Exception) {
-            // Capturar cualquier excepción y mostrar el error
-            Log.e("API Error", "Error al procesar la respuesta: ${e.message}")
-            e.printStackTrace()
-        }
-
-
     }
-
     private fun loadUsers() {
         // Utiliza GlobalScope.launch para lanzar una nueva corrutina en el hilo de IO
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 // Realiza una solicitud HTTP GET a la API y espera la respuesta como una cadena
-                val response = Fuel.get("https://795b-2803-2d60-1105-2873-c14-3fa5-d4ba-aea.ngrok-free.app/ganancia_15_proyectos_o_alfabet").awaitString()
+                val response = Fuel.get("https://795b-2803-2d60-1105-2873-c14-3fa5-d4ba-aea.ngrok-free.app/ganancia_clientes_mayor_50000").awaitString()
 
                 // Utiliza withContext para cambiar al hilo principal y actualizar la IU
                 withContext(Dispatchers.Main) {
                     // Inicializa Gson para convertir la respuesta JSON en una lista de usuarios
                     val gson = Gson()
-                    Toast.makeText(this@Consulta1, response, Toast.LENGTH_SHORT).show()
-                    var listabtconsulta1 = gson.fromJson(response, Array<btconsulta1>::class.java).toList()
+                    Toast.makeText(this@Consulta2, response, Toast.LENGTH_SHORT).show()
+                    var listabtconsulta2 = gson.fromJson(response, Array<btconsulta2>::class.java).toList()
 
-                    listabtconsulta1 = listabtconsulta1.drop(1)
+                    // Elimina el primer elemento de la lista
+                    listabtconsulta2 = listabtconsulta2.drop(1)
 
-                    binding.recyclerView.layoutManager = LinearLayoutManager(this@Consulta1)
-                    binding.recyclerView.adapter = Consultas1Adapter.Consultas1Adapter(listabtconsulta1)
+                    binding.recyclerView.layoutManager = LinearLayoutManager(this@Consulta2)
+                    binding.recyclerView.adapter = Consultas2Adapter.Consultas2Adapter(listabtconsulta2)
 
                 }
             } catch (ex: Exception) {
@@ -93,7 +68,7 @@ class Consulta1 : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     // Muestra un mensaje de error en un Toast
                     Toast.makeText(
-                        this@Consulta1,
+                        this@Consulta2,
                         "Error:  ${ex.message}",
                         Toast.LENGTH_LONG
                     ).show()
@@ -102,11 +77,4 @@ class Consulta1 : AppCompatActivity() {
             }
         }
     }
-
-
 }
-
-
-
-
-

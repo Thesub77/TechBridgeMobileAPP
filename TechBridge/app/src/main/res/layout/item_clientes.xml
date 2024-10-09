@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/border_consulta"
     android:layout_marginBottom="8dp"
-
     >
 
     <!-- Project Name -->
     <TextView
         android:id="@+id/textViewProjectName"
-        android:layout_width="188dp"
+        android:layout_width="148dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:fontFamily="@font/lilita_one"
-        android:translationY="50dp"
-        android:textSize="17sp"
         android:text="Nombre"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textSize="16sp"
+        android:translationY="40dp"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Profit Margin -->
 
@@ -29,33 +28,33 @@
         android:layout_width="119dp"
         android:layout_height="104dp"
         android:background="@null"
-        android:translationY="5dp"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/iconmaletin" />
+        android:translationY="1dp"
+        app:srcCompat="@drawable/iconempresa" />
 
     <TextView
         android:id="@+id/textViewProfitMargin"
-        android:layout_width="188dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="275dp"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="285dp"
         android:fontFamily="@font/lilita_one"
-        android:translationY="-60dp"
-        android:textSize="17sp"
         android:text="Margen"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        android:textSize="16sp"
+        android:translationY="-65dp"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textPorcentaje"
-        android:layout_width="188dp"
-        android:layout_height="wrap_content"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
         android:layout_marginStart="120dp"
+        android:layout_marginTop="-9dp"
         android:fontFamily="@font/lilita_one"
         android:text="Porcentaje"
         android:textColor="@color/black"
         android:textSize="17sp"
-        android:translationY="-50dp"
+        android:translationY="-45dp"
         app:layout_constraintStart_toStartOf="parent" />
 
 

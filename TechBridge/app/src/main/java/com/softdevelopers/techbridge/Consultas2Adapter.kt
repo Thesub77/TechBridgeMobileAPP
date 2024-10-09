@@ -7,9 +7,9 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class Consultas1Adapter {
-    class Consultas1Adapter(private val exchanges: List<btconsulta1>): // Define la clase del adaptador y recibe una lista de usuarios como parámetro
-        RecyclerView.Adapter<Consultas1Adapter.ExchangeViewHolder>() { // Extiende RecyclerView.Adapter y especifica el tipo de ViewHolder
+class Consultas2Adapter {
+    class Consultas2Adapter(private val exchanges: List<btconsulta2>): // Define la clase del adaptador y recibe una lista de usuarios como parámetro
+        RecyclerView.Adapter<Consultas2Adapter.ExchangeViewHolder>() { // Extiende RecyclerView.Adapter y especifica el tipo de ViewHolder
 
         // Clase interna que representa cada elemento de la lista en la vista
         class ExchangeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -19,8 +19,8 @@ class Consultas1Adapter {
             private val porcentaje = itemView.findViewById<TextView>(R.id.textPorcentaje)
 
             // Función para vincular el valor con el campo del itemView
-            fun bind(exch: btconsulta1){
-                textViewProjectName.text = exch.nombre
+            fun bind(exch: btconsulta2){
+                textViewProjectName.text = "Cliente"+exch.nombre
                 textViewProfitMargin.text = "$" + exch.margin.toString()
                 // Convertir el margen de ganancia en porcentaje y establecer el texto y color del porcentaje
                 val marginPercentage = exch.margin / 100
@@ -34,7 +34,6 @@ class Consultas1Adapter {
                         )
                     )
                 }
-
             }
         }
 
@@ -42,7 +41,7 @@ class Consultas1Adapter {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExchangeViewHolder {
             // Define el diseño de los elementos de la vista
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_project,parent,false)
+                .inflate(R.layout.item_clientes,parent,false)
             // Crea un nuevo objeto UserViewHolder con la vista inflada
             return ExchangeViewHolder(view)
         }
@@ -61,4 +60,3 @@ class Consultas1Adapter {
 
 
 }
-
