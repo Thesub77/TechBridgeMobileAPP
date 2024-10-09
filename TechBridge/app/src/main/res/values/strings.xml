@@ -42,5 +42,8 @@
     <string name="techbrigde_info">TECHBRIGDE Info</string>
     <string name="_0_0_1">0.0.1</string>
     <string name="techbridge_es_una_aplicaci_n_desarrollada_por_softdevelopers_que_proporciona_informaci_n_esencial_para_la_toma_de_decisiones_empresariales_esta_es_la_primera_versi_n_de_la_aplicaci_n_dise_ada_para_ayudar_a_las_empresas_a_optimizar_sus_procesos_mediante_el_acceso_r_pido_y_sencillo_a_datos_clave_nuestro_objetivo_es_ofrecer_una_plataforma_intuitiva_que_permita_a_los_usuarios_tomar_decisiones_informadas_basadas_en_datos_precisos_y_actualizados">TechBridge es una aplicación desarrollada por SoftDevelopers que proporciona información esencial para la toma de decisiones empresariales. Esta es la primera versión de la aplicación, diseñada para ayudar a la empresa a optimizar sus procesos mediante el acceso rápido y sencillo a datos clave. Nuestro objetivo es ofrecer una plataforma intuitiva que permita a los usuarios tomar decisiones informadas basadas en datos precisos y actualizados.</string>
+    <string name="top_10_proyectos_con_mayor_ganancia">Top 10 proyectos con mayor ganancia</string>
+    <string name="top_10_proyectos_con_menor_margen_de_ganancia">Top 10 proyectos con menor margen de ganancia</string>
+    <string name="proyectos_con_costo_superior_a_1_000_000">Proyectos con costo superior a 1,000,000.</string>
 
 </resources>

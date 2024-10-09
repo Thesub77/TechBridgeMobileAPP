@@ -1,7 +1,9 @@
 package com.softdevelopers.techbridge
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -36,6 +38,12 @@ class Consulta1 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val btnBack: ImageButton = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            val intent = Intent(this, consulta::class.java)
+            startActivity(intent)
+        }
+
         loadUsers()
 
         Toast.makeText(this, "Llegada", Toast.LENGTH_SHORT).show()

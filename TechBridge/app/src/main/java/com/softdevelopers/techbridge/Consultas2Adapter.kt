@@ -19,21 +19,28 @@ class Consultas2Adapter {
             private val porcentaje = itemView.findViewById<TextView>(R.id.textPorcentaje)
 
             // Función para vincular el valor con el campo del itemView
-            fun bind(exch: btconsulta2){
-                textViewProjectName.text = "Cliente"+exch.nombre
-                textViewProfitMargin.text = "$" + exch.margin.toString()
-                // Convertir el margen de ganancia en porcentaje y establecer el texto y color del porcentaje
-                val marginPercentage = exch.margin / 100
+            fun bind(exch: btconsulta2) {
+                textViewProjectName.text = exch.nombre
+                textViewProfitMargin.text = "$${exch.margin}"
 
-                // Establece el texto y cambia el color del TextView porcentaje
-                porcentaje.text = "Margen: $marginPercentage%".also {
-                    porcentaje.setTextColor(
-                        ContextCompat.getColor(
-                            itemView.context,
-                            if (marginPercentage >= 1) R.color.verde else if (marginPercentage <= 0) R.color.rojo else R.color.black
-                        )
+                // Convertir el margen de ganancia en porcentaje
+                val ingreso = exch.margin + exch.payment
+                val marginPercentage = (exch.margin / ingreso) * 100
+
+                // Establece el texto con formato a dos decimales y cambia el color del TextView porcentaje
+                porcentaje.text = "Margen: ${String.format("%.2f", marginPercentage)}%"
+
+                // Cambia el color del TextView según el porcentaje
+                porcentaje.setTextColor(
+                    ContextCompat.getColor(
+                        itemView.context,
+                        when {
+                            marginPercentage >= 1 -> R.color.verde
+
+                            else -> R.color.rojo
+                        }
                     )
-                }
+                )
             }
         }
 

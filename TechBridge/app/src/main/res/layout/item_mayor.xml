@@ -32,29 +32,18 @@
         android:translationY="1dp"
         app:srcCompat="@drawable/iconmaletin" />
 
-    <TextView
-        android:id="@+id/textViewProfitMargin"
-        android:layout_width="120dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="285dp"
-        android:fontFamily="@font/lilita_one"
-        android:text="Margen"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:translationY="-65dp"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textPorcentaje"
+        android:id="@+id/textCosto"
         android:layout_width="145dp"
         android:layout_height="50dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="-9dp"
         android:fontFamily="@font/lilita_one"
-        android:text="Porcentaje"
+        android:text="Costo"
         android:textColor="@color/black"
         android:textSize="17sp"
-        android:translationY="-45dp"
+        android:translationY="-40dp"
         app:layout_constraintStart_toStartOf="parent" />
 
 

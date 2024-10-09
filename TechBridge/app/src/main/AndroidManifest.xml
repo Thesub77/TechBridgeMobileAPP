@@ -15,6 +15,24 @@
         android:theme="@style/Theme.TechBridge"
         tools:targetApi="31">
         <activity
+            android:name=".Consulta5"
+            android:exported="false" />
+        <activity
+            android:name=".Consulta7"
+            android:exported="false" />
+        <activity
+            android:name=".Consulta8"
+            android:exported="false" />
+        <activity
+            android:name=".Consulta6"
+            android:exported="false" />
+        <activity
+            android:name=".Consulta4"
+            android:exported="false" />
+        <activity
+            android:name=".Consulta3"
+            android:exported="false" />
+        <activity
             android:name=".Consulta2"
             android:exported="false" />
         <activity

@@ -7,9 +7,9 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class Consultas1Adapter {
-    class Consultas1Adapter(private val exchanges: List<btconsulta1>): // Define la clase del adaptador y recibe una lista de usuarios como parámetro
-        RecyclerView.Adapter<Consultas1Adapter.ExchangeViewHolder>() { // Extiende RecyclerView.Adapter y especifica el tipo de ViewHolder
+class Consultas4Adapter {
+    class Consultas4Adapter(private val exchanges: List<btconsulta4>): // Define la clase del adaptador y recibe una lista de usuarios como parámetro
+        RecyclerView.Adapter<Consultas4Adapter.ExchangeViewHolder>() { // Extiende RecyclerView.Adapter y especifica el tipo de ViewHolder
 
         // Clase interna que representa cada elemento de la lista en la vista
         class ExchangeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -19,7 +19,7 @@ class Consultas1Adapter {
             private val porcentaje = itemView.findViewById<TextView>(R.id.textPorcentaje)
 
             // Función para vincular el valor con el campo del itemView
-            fun bind(exch: btconsulta1) {
+            fun bind(exch: btconsulta4) {
                 textViewProjectName.text = exch.nombre
                 textViewProfitMargin.text = "$${exch.margin}"
 
@@ -42,14 +42,13 @@ class Consultas1Adapter {
                     )
                 )
             }
-
         }
 
         // Método llamado cuando se necesita crear un nuevo ViewHolder
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExchangeViewHolder {
             // Define el diseño de los elementos de la vista
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_project,parent,false)
+                .inflate(R.layout.item_proyectos,parent,false)
             // Crea un nuevo objeto UserViewHolder con la vista inflada
             return ExchangeViewHolder(view)
         }
@@ -68,4 +67,3 @@ class Consultas1Adapter {
 
 
 }
-

@@ -192,7 +192,7 @@
                         android:layout_marginStart="-140dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/lilita_one"
-                        android:text="@string/top_10_proyectos_con_mayor_margen"
+                        android:text="@string/top_10_proyectos_con_mayor_ganancia"
                         android:textAlignment="center"
                         android:textColor="@color/blue"
                         android:textSize="13sp"
@@ -215,7 +215,7 @@
                     android:orientation="horizontal" >
 
                     <ImageButton
-                        android:id="@+id/btnmayorganproy"
+                        android:id="@+id/btnmayor100"
                         android:layout_width="116dp"
                         android:layout_height="100dp"
                         android:background="@null"
@@ -232,7 +232,7 @@
                         android:layout_marginStart="-130dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/lilita_one"
-                        android:text="@string/proyectos_con_mayor_margen_de_ganancia"
+                        android:text="@string/proyectos_con_costo_superior_a_1_000_000"
                         android:textAlignment="center"
                         android:paddingStart="8dp"
                         android:textColor="@color/blue"
@@ -265,11 +265,11 @@
                         android:layout_marginStart="-127dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/lilita_one"
-                        android:text="@string/top_10_proyectos_con_menor_margen_por_a_o"
+                        android:text="@string/top_10_proyectos_con_menor_margen_de_ganancia"
                         android:textAlignment="center"
                         android:textColor="@color/blue"
                         android:textSize="13sp"
-                        android:translationY="110dp"/>
+                        android:translationY="105dp"/>
                 </LinearLayout>
             </LinearLayout>
 

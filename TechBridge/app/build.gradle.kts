@@ -53,6 +53,7 @@ dependencies {
     implementation ("com.google.code.gson:gson:2.8.9")
     implementation ("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
 
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

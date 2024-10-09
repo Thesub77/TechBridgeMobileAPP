@@ -12,24 +12,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.coroutines.awaitString
 import com.google.gson.Gson
-import com.softdevelopers.techbridge.databinding.ActivityConsulta1Binding
-import com.softdevelopers.techbridge.databinding.ActivityConsulta2Binding
+import com.softdevelopers.techbridge.databinding.ActivityConsulta5Binding
+import com.softdevelopers.techbridge.databinding.ActivityConsulta8Binding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class Consulta2 : AppCompatActivity() {
 
-
-    // Declara el binding
-    private lateinit var binding: ActivityConsulta2Binding
+class Consulta5 : AppCompatActivity() {
+    private lateinit var binding: ActivityConsulta5Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Infla el layout usando View Binding
-        binding = ActivityConsulta2Binding.inflate(layoutInflater)
+        binding = ActivityConsulta5Binding.inflate(layoutInflater)
         setContentView(binding.root) // Establece el root view del binding como el contenido de la actividad
 
         // Configura el listener para los insets
@@ -38,7 +36,6 @@ class Consulta2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         //Cargar el metodo users
         loadUsers()
 
@@ -50,20 +47,20 @@ class Consulta2 : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 // Realiza una solicitud HTTP GET a la API y espera la respuesta como una cadena
-                val response = Fuel.get("https://795b-2803-2d60-1105-2873-c14-3fa5-d4ba-aea.ngrok-free.app/ganancia_clientes_mayor_50000").awaitString()
+                val response = Fuel.get("https://795b-2803-2d60-1105-2873-c14-3fa5-d4ba-aea.ngrok-free.app/ganancia_proyectosCostos_mayor_1000000").awaitString()
 
                 // Utiliza withContext para cambiar al hilo principal y actualizar la IU
                 withContext(Dispatchers.Main) {
                     // Inicializa Gson para convertir la respuesta JSON en una lista de usuarios
                     val gson = Gson()
-                    Toast.makeText(this@Consulta2, response, Toast.LENGTH_SHORT).show()
-                    var listabtconsulta2 = gson.fromJson(response, Array<btconsulta2>::class.java).toList()
+                    //Toast.makeText(this@Consulta6, response, Toast.LENGTH_SHORT).show()
+                    var listabtconsulta5 = gson.fromJson(response, Array<btconsulta5>::class.java).toList()
 
                     // Elimina el primer elemento de la lista
-                    listabtconsulta2 = listabtconsulta2.drop(1)
+                    listabtconsulta5 = listabtconsulta5.drop(1)
 
-                    binding.recyclerView.layoutManager = LinearLayoutManager(this@Consulta2)
-                    binding.recyclerView.adapter = Consultas2Adapter.Consultas2Adapter(listabtconsulta2)
+                    binding.recyclerView.layoutManager = LinearLayoutManager(this@Consulta5)
+                    binding.recyclerView.adapter = Consultas5Adapter.Consultas5Adapter(listabtconsulta5)
 
                 }
             } catch (ex: Exception) {
@@ -71,7 +68,7 @@ class Consulta2 : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     // Muestra un mensaje de error en un Toast
                     Toast.makeText(
-                        this@Consulta2,
+                        this@Consulta5,
                         "Error:  ${ex.message}",
                         Toast.LENGTH_LONG
                     ).show()
