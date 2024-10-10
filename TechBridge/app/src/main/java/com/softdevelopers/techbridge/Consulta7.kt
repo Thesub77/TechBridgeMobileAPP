@@ -46,7 +46,7 @@ class Consulta7 : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 // Realiza una solicitud HTTP GET a la API y espera la respuesta como una cadena
-                val response = Fuel.get("https://795b-2803-2d60-1105-2873-c14-3fa5-d4ba-aea.ngrok-free.app/ganancia_ultimos10_proyectos_entregados").awaitString()
+                val response = Fuel.get("https://cubeapitechbridge.westus.cloudapp.azure.com/apiolap/ganancia_ultimos10_proyectos_entregados").awaitString()
 
                 // Utiliza withContext para cambiar al hilo principal y actualizar la IU
                 withContext(Dispatchers.Main) {

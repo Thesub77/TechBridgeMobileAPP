@@ -25,7 +25,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -52,6 +52,8 @@ dependencies {
     implementation ("com.github.kittinunf.fuel:fuel-gson:2.3.1")
     implementation ("com.google.code.gson:gson:2.8.9")
     implementation ("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
+    implementation ("com.github.AnyChart:AnyChart-Android:1.1.2")
+
 
 
     testImplementation(libs.junit)
