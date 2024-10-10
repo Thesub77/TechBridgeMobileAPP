@@ -20,7 +20,3 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-# Keep AnyChart classes
--keep class com.anychart.** { *; }
--keep class com.anychart.chart.common.dataentry.** { *; }
--dontwarn com.anychart.**

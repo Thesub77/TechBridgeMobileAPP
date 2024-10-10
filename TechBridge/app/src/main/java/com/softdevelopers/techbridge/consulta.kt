@@ -72,5 +72,11 @@ class consulta : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btngananciamet: ImageButton = findViewById(R.id.btngananciamet)
+        btngananciamet.setOnClickListener {
+            val intent = Intent(this, Consulta3::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -1,11 +1,20 @@
 package com.softdevelopers.techbridge
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.anychart.AnyChart
+import com.anychart.AnyChartView
+import com.anychart.chart.common.dataentry.DataEntry
+import com.anychart.chart.common.dataentry.ValueDataEntry
+import com.anychart.charts.Pie
+import java.text.NumberFormat
+import java.util.Locale
+
 
 class Consultas3Adapter {
     class Consultas3Adapter(private val exchanges: List<btconsulta3>): // Define la clase del adaptador y recibe una lista de usuarios como parámetro
@@ -14,26 +23,16 @@ class Consultas3Adapter {
         // Clase interna que representa cada elemento de la lista en la vista
         class ExchangeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
             // Define los campos del itemView
-            private val textViewProjectName = itemView.findViewById<TextView>(R.id.textViewProjectName)
-            private val textViewProfitMargin = itemView.findViewById<TextView>(R.id.textViewProfitMargin)
-            private val porcentaje = itemView.findViewById<TextView>(R.id.textPorcentaje)
+            private val textViewanio = itemView.findViewById<TextView>(R.id.textViewanio)
+            private val textprofit = itemView.findViewById<TextView>(R.id.textprofit)
+
 
             // Función para vincular el valor con el campo del itemView
-            fun bind(exch: btconsulta3){
-                textViewProjectName.text = "Cliente"+exch.anio
-                textViewProfitMargin.text = "$" + exch.margin.toString()
-                // Convertir el margen de ganancia en porcentaje y establecer el texto y color del porcentaje
-                val marginPercentage = exch.margin / 100
+            fun bind(exch: btconsulta3) {
+                textViewanio.text = exch.anio.toInt().toString()
+                val formattedMargin = NumberFormat.getInstance(Locale.US).format(exch.margin)
+                textprofit.text = "$$formattedMargin"
 
-                // Establece el texto y cambia el color del TextView porcentaje
-                porcentaje.text = "Margen: $marginPercentage%".also {
-                    porcentaje.setTextColor(
-                        ContextCompat.getColor(
-                            itemView.context,
-                            if (marginPercentage >= 1) R.color.verde else if (marginPercentage <= 0) R.color.rojo else R.color.black
-                        )
-                    )
-                }
             }
         }
 
@@ -41,7 +40,7 @@ class Consultas3Adapter {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExchangeViewHolder {
             // Define el diseño de los elementos de la vista
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_clientes,parent,false)
+                .inflate(R.layout.item_anios,parent,false)
             // Crea un nuevo objeto UserViewHolder con la vista inflada
             return ExchangeViewHolder(view)
         }

@@ -13,7 +13,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled= true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
 
@@ -25,7 +25,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -52,9 +52,7 @@ dependencies {
     implementation ("com.github.kittinunf.fuel:fuel-gson:2.3.1")
     implementation ("com.google.code.gson:gson:2.8.9")
     implementation ("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
-    implementation ("com.github.AnyChart:AnyChart-Android:1.1.2")
-
-
+    implementation ("com.github.AnyChart:AnyChart-Android:1.1.5")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

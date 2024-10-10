@@ -27,7 +27,7 @@ lateinit var listabtconsulta2: List<btconsulta2>
 
 //Consulta3
 data class btconsulta3(
-    @SerializedName("Year") val anio: String,
+    @SerializedName("Year") val anio: Double,
     @SerializedName("Profit Margin Without Nulls") val margin: Double,
 )
 

@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import java.text.NumberFormat
+import java.util.Locale
 
 class Consultas7Adapter {
     class Consultas7Adapter(private val exchanges: List<btconsulta7>) : // Define la clase del adaptador y recibe una lista de usuarios como parámetro
@@ -23,11 +25,14 @@ class Consultas7Adapter {
             // Función para vincular el valor con el campo del itemView
             fun bind(exch: btconsulta7) {
                 textViewProjectName.text = exch.nombre
-                textViewProfitMargin.text = "$${exch.margin}"
+                val formattedMargin = NumberFormat.getInstance(Locale.US).format(exch.margin)
+                textViewProfitMargin.text = "$$formattedMargin"
+
 
                 // Convertir el margen de ganancia en porcentaje
                 val ingreso = exch.margin + exch.payment
                 val marginPercentage = (exch.margin / ingreso) * 100
+
 
                 // Establece el texto con formato a dos decimales y cambia el color del TextView porcentaje
                 porcentaje.text = "Margen: ${String.format("%.2f", marginPercentage)}%"

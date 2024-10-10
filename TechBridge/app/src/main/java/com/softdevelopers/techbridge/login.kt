@@ -37,8 +37,8 @@ class login : AppCompatActivity() {
     //Creacion de usuarios
     private fun loadUsers() {
         // Inicializar los usuarios
-        users["carlosruiz"] = "contra1"
-        users["messigoat"] = "contra2"
+        users["carlos"] = "123456"
+
 
         // Configuramos los componentes de la UI
         val txtUser = findViewById<EditText>(R.id.txtuser)

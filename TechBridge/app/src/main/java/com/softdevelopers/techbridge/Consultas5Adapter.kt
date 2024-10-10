@@ -5,6 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import java.text.NumberFormat
+import java.util.Locale
 
 class Consultas5Adapter {
     class Consultas5Adapter(private val exchanges: List<btconsulta5>) : // Define la clase del adaptador y recibe una lista de usuarios como parámetro
@@ -22,7 +24,8 @@ class Consultas5Adapter {
             // Función para vincular el valor con el campo del itemView
             fun bind(exch: btconsulta5) {
                 textViewProjectName.text = exch.nombre
-                textCosto.text = "$${exch.payment}"
+                val formattedMargin = NumberFormat.getInstance(Locale.US).format(exch.payment)
+                textCosto.text = "$$formattedMargin"
             }
         }
 
