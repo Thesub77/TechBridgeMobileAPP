@@ -44,6 +44,7 @@
         android:translationY="-65dp"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Profit Margin -->
     <TextView
         android:id="@+id/textPorcentaje"
         android:layout_width="145dp"
@@ -56,6 +57,7 @@
         android:textSize="17sp"
         android:translationY="-45dp"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </LinearLayout>

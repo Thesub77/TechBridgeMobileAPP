@@ -46,11 +46,11 @@ class Consulta1 : AppCompatActivity() {
 
         loadUsers()
 
-        Toast.makeText(this, "Llegada", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Cargando", Toast.LENGTH_SHORT).show()
 
         try {
-        Fuel.get("https://cubeapitechbridge.westus.cloudapp.azure.com/apiolap/ganancia_15_proyectos_o_alfabet")
-            .response { request, response, result ->
+            Fuel.get("https://cubeapitechbridge.westus.cloudapp.azure.com/apiolap/ganancia_15_proyectos_o_alfabet")
+                .response { request, response, result ->
 
                     // Procesando la respuesta
                     val jsonBody = response.body().asString("application/json")
@@ -67,7 +67,7 @@ class Consulta1 : AppCompatActivity() {
                     binding.recyclerView.adapter = Consultas1Adapter.Consultas1Adapter(listabtconsulta1)
 
 
-            } } catch (e: Exception) {
+                } } catch (e: Exception) {
             // Capturar cualquier excepción y mostrar el error
             Log.e("API Error", "Error al procesar la respuesta: ${e.message}")
             e.printStackTrace()
@@ -87,7 +87,7 @@ class Consulta1 : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     // Inicializa Gson para convertir la respuesta JSON en una lista de usuarios
                     val gson = Gson()
-                    Toast.makeText(this@Consulta1, response, Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@Consulta1, response, Toast.LENGTH_SHORT).show()
                     var listabtconsulta1 = gson.fromJson(response, Array<btconsulta1>::class.java).toList()
 
                     listabtconsulta1 = listabtconsulta1.drop(1)

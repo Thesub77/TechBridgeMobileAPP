@@ -38,7 +38,7 @@ class Consulta7 : AppCompatActivity() {
         //Cargar el metodo users
         loadUsers()
 
-        Toast.makeText(this, "Llegada", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Cargando", Toast.LENGTH_SHORT).show()
 
     }
     private fun loadUsers() {

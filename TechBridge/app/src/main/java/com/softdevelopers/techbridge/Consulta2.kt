@@ -42,7 +42,7 @@ class Consulta2 : AppCompatActivity() {
         //Cargar el metodo users
         loadUsers()
 
-        Toast.makeText(this, "Llegada", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Cargando", Toast.LENGTH_SHORT).show()
 
     }
     private fun loadUsers() {
@@ -56,7 +56,7 @@ class Consulta2 : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     // Inicializa Gson para convertir la respuesta JSON en una lista de usuarios
                     val gson = Gson()
-                    Toast.makeText(this@Consulta2, response, Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@Consulta2, response, Toast.LENGTH_SHORT).show()
                     var listabtconsulta2 = gson.fromJson(response, Array<btconsulta2>::class.java).toList()
 
                     // Elimina el primer elemento de la lista
