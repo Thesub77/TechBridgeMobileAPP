@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acercade">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="300dp"
+                android:background="@color/white"
+                android:contentDescription="@string/iconback"
+                android:translationY="@dimen/_20dp"
+                app:srcCompat="@drawable/iconback"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtSoft"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="-20dp"
+                android:fontFamily="@font/lilita_one"
+                android:text="@string/acerca_de"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                android:textSize="24sp"
+                tools:ignore="TextSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgTechlogin"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:translationY="0dp"
+                android:textAlignment="center"
+                app:srcCompat="@drawable/logo1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lilita_one"
+                android:text="@string/_0_0_1"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:translationY="0dp"
+                />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_width="match_parent"
+                android:layout_height="237dp"
+                android:padding="16dp"
+                android:text="@string/techbridge_es_una_aplicaci_n_desarrollada_por_softdevelopers_que_proporciona_informaci_n_esencial_para_la_toma_de_decisiones_empresariales_esta_es_la_primera_versi_n_de_la_aplicaci_n_dise_ada_para_ayudar_a_las_empresas_a_optimizar_sus_procesos_mediante_el_acceso_r_pido_y_sencillo_a_datos_clave_nuestro_objetivo_es_ofrecer_una_plataforma_intuitiva_que_permita_a_los_usuarios_tomar_decisiones_informadas_basadas_en_datos_precisos_y_actualizados"
+                android:textColor="#000000"
+                android:justificationMode="inter_word"
+                android:translationY="10dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lilita_one"
+                android:textAlignment="center"
+                android:translationY="250dp"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:text="@string/softdevelopers" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
