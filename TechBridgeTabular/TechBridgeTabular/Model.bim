@@ -1,0 +1,360 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1500,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/localhost;softDevelopersDW",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "localhost",
+            "database": "softDevelopersDW"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "Username": "sa",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "Dim_Customer",
+        "columns": [
+          {
+            "name": "customer key",
+            "dataType": "int64",
+            "sourceColumn": "customer key"
+          },
+          {
+            "name": "company name",
+            "dataType": "string",
+            "sourceColumn": "company name"
+          },
+          {
+            "name": "company contact",
+            "dataType": "string",
+            "sourceColumn": "company contact"
+          },
+          {
+            "name": "company location",
+            "dataType": "string",
+            "sourceColumn": "company location"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;softDevelopersDW\",",
+                "    DWVW_vw_Dim_Customer = Source{[Schema=\"DWVW\",Item=\"vw_Dim_Customer\"]}[Data]",
+                "in",
+                "    DWVW_vw_Dim_Customer"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Date",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "Date Key",
+            "dataType": "int64",
+            "sourceColumn": "Date Key"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isKey": true,
+            "sourceColumn": "Date"
+          },
+          {
+            "name": "Day",
+            "dataType": "int64",
+            "sourceColumn": "Day"
+          },
+          {
+            "name": "Weekday",
+            "dataType": "int64",
+            "sourceColumn": "Weekday"
+          },
+          {
+            "name": "Weekday Name",
+            "dataType": "string",
+            "sourceColumn": "Weekday Name"
+          },
+          {
+            "name": "Weekday Name Short",
+            "dataType": "string",
+            "sourceColumn": "Weekday Name Short"
+          },
+          {
+            "name": "Day Of Year",
+            "dataType": "int64",
+            "sourceColumn": "Day Of Year"
+          },
+          {
+            "name": "Week Of Month",
+            "dataType": "int64",
+            "sourceColumn": "Week Of Month"
+          },
+          {
+            "name": "Week Of Year",
+            "dataType": "int64",
+            "sourceColumn": "Week Of Year"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "sourceColumn": "Month"
+          },
+          {
+            "name": "Month Name",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Month Name",
+            "sortByColumn": "Month"
+          },
+          {
+            "name": "Month Name Short",
+            "dataType": "string",
+            "sourceColumn": "Month Name Short"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Quarter"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Year"
+          },
+          {
+            "name": "MMYYYY",
+            "dataType": "string",
+            "sourceColumn": "MMYYYY"
+          },
+          {
+            "name": "Month Year",
+            "dataType": "string",
+            "sourceColumn": "Month Year"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;softDevelopersDW\",",
+                "    DWVW_vw_Dim_Date = Source{[Schema=\"DWVW\",Item=\"vw_Dim_Date\"]}[Data]",
+                "in",
+                "    DWVW_vw_Dim_Date"
+              ]
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Calendar Hierarchy",
+            "levels": [
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter"
+              },
+              {
+                "name": "Month Name",
+                "ordinal": 2,
+                "column": "Month Name"
+              },
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Date",
+                "ordinal": 3,
+                "column": "Date"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dim_Project",
+        "columns": [
+          {
+            "name": "project key",
+            "dataType": "int64",
+            "sourceColumn": "project key"
+          },
+          {
+            "name": "project name",
+            "dataType": "string",
+            "sourceColumn": "project name"
+          },
+          {
+            "name": "project description",
+            "dataType": "string",
+            "sourceColumn": "project description"
+          },
+          {
+            "name": "project start date",
+            "dataType": "dateTime",
+            "sourceColumn": "project start date"
+          },
+          {
+            "name": "project end date",
+            "dataType": "dateTime",
+            "sourceColumn": "project end date"
+          },
+          {
+            "name": "project state",
+            "dataType": "string",
+            "sourceColumn": "project state"
+          },
+          {
+            "name": "project deadline",
+            "dataType": "dateTime",
+            "sourceColumn": "project deadline"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;softDevelopersDW\",",
+                "    DWVW_vw_Dim_Project = Source{[Schema=\"DWVW\",Item=\"vw_Dim_Project\"]}[Data]",
+                "in",
+                "    DWVW_vw_Dim_Project"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fact_Payment",
+        "columns": [
+          {
+            "name": "payment key",
+            "dataType": "int64",
+            "sourceColumn": "payment key"
+          },
+          {
+            "name": "customer key",
+            "dataType": "int64",
+            "sourceColumn": "customer key"
+          },
+          {
+            "name": "project key",
+            "dataType": "int64",
+            "sourceColumn": "project key"
+          },
+          {
+            "name": "payment date key",
+            "dataType": "int64",
+            "sourceColumn": "payment date key"
+          },
+          {
+            "name": "payment amount",
+            "dataType": "double",
+            "sourceColumn": "payment amount"
+          },
+          {
+            "name": "profit margin",
+            "dataType": "double",
+            "sourceColumn": "profit margin"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/localhost;softDevelopersDW\",",
+                "    DWVW_vw_Fact_Payment = Source{[Schema=\"DWVW\",Item=\"vw_Fact_Payment\"]}[Data]",
+                "in",
+                "    DWVW_vw_Fact_Payment"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum of payment amount",
+            "expression": "SUM([payment amount])"
+          },
+          {
+            "name": "Sum of profit margin",
+            "expression": "SUM([profit margin])"
+          },
+          {
+            "name": "Average of profit margin",
+            "expression": "AVERAGE([profit margin])"
+          },
+          {
+            "name": "Count of payment amount",
+            "expression": "COUNTA([payment amount])"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "009186ad-1c35-4a6e-9c7a-63aef5432a2e",
+        "fromTable": "Fact_Payment",
+        "fromColumn": "payment date key",
+        "toTable": "Dim_Date",
+        "toColumn": "Date Key"
+      },
+      {
+        "name": "cc2177f0-cf2f-40f6-8a63-0f7741b2bdca",
+        "fromTable": "Fact_Payment",
+        "fromColumn": "customer key",
+        "toTable": "Dim_Customer",
+        "toColumn": "customer key"
+      },
+      {
+        "name": "fdd94cc0-a7fb-4aa9-a83c-116f00e6b8bf",
+        "fromTable": "Fact_Payment",
+        "fromColumn": "project key",
+        "toTable": "Dim_Project",
+        "toColumn": "project key"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "600"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
